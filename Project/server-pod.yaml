@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: server
+    labels:
+        app: server
+spec:
+  containers:
+  - name: server
+    image: gowtham4/server:v1
+    ports:
+    - containerPort: 8180
+    env:
+    - name: URL
+      value: "app-service"
